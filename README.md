@@ -6,7 +6,7 @@
 ## Overview Use Case Diagram
 ![image](https://github.com/user-attachments/assets/224e98da-9eb8-46bc-a49e-5bcf62c785d2)
 ## Highlighted Features
-I use RabbitMQ to receive feedback from users. For example, if two devices are open at the same time (reader and librarian), when readers request books, cancel book requests, request to make a reader card, extend the expiration date of a reader card, etc., the interface on the librarian's side will display notifications in real-time.
+I use RabbitMQ to receive requests from users. For example, if two devices are open at the same time (reader and librarian), when readers request books, cancel book requests, request to make a reader card, extend the expiration date of a reader card, etc., the interface on the librarian's side will display notifications in real-time.
 <br>
 
 
