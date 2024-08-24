@@ -6,10 +6,10 @@ package view;
 
 import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 
 import javax.swing.JOptionPane;
+
+import org.mindrot.jbcrypt.BCrypt;
 
 import DAO.LibrarianDAO;
 import DAO.ReaderDAO;
@@ -202,23 +202,13 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private String hashPassword(String password) {
-        byte[] temp = password.getBytes();
-        byte[] hashData = null;
+        // Fixed salt
+        String fixedSalt = "$2a$10$eImiTXuWVxfM37uY4JANjQ"; 
 
-        try {
-            MessageDigest md = MessageDigest.getInstance("MD5");
-            hashData = md.digest(temp);
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
+        // Hash password using BCrypt with fixed salt
+        String hashedPassword = BCrypt.hashpw(password, fixedSalt);
 
-        StringBuilder hashPass = new StringBuilder();
-
-        for (byte item : hashData) {
-            hashPass.append(Byte.toUnsignedInt(item));
-        }
-
-        return hashPass.toString();
+        return hashedPassword;
     }
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {

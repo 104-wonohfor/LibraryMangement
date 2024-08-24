@@ -177,7 +177,7 @@ public class ReaderDAO {
 
     public boolean resetPassword(String idNumber) {
         try {
-            String query = "UPDATE Reader SET ReaderPassword = '15410012614513998108181121232209311017111612' WHERE ReaderIdentificationNumber = ?";
+            String query = "UPDATE Reader SET ReaderPassword = '$2a$10$eImiTXuWVxfM37uY4JANjOZDshUrHl1318pDEXsJ.N2L8CyrmEpbK' WHERE ReaderIdentificationNumber = ?";
 
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, idNumber);

@@ -4,13 +4,13 @@
  */
 package view;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
 
 
 import javax.swing.JOptionPane;
+
+import org.mindrot.jbcrypt.BCrypt;
 
 import DAO.ReaderDAO;
 
@@ -281,23 +281,13 @@ public class ForgotPassword extends javax.swing.JFrame {
     }
 
     private String hashPassword(String password) {
-        byte[] temp = password.getBytes();
-        byte[] hashData = null;
+        // Fixed salt
+        String fixedSalt = "$2a$10$eImiTXuWVxfM37uY4JANjQ"; 
 
-        try {
-            MessageDigest md = MessageDigest.getInstance("MD5");
-            hashData = md.digest(temp);
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
+        // Hash password using BCrypt with fixed salt
+        String hashedPassword = BCrypt.hashpw(password, fixedSalt);
 
-        StringBuilder hashPass = new StringBuilder();
-
-        for (byte item : hashData) {
-            hashPass.append(Byte.toUnsignedInt(item));
-        }
-
-        return hashPass.toString();
+        return hashedPassword;
     }
 
     private void btnEditPasswordActionPerformed(java.awt.event.ActionEvent evt) {

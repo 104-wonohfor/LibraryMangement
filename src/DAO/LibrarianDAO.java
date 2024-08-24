@@ -127,7 +127,7 @@ public class LibrarianDAO {
 
     public boolean resetPassword(String idNumber) {
         try {
-            String query = "UPDATE Librarian SET LibrarianPassword = '216125107150691248917719582916031223229252' WHERE LibrarianIdentificationNumber = ?";
+            String query = "UPDATE Librarian SET LibrarianPassword = '$2a$10$eImiTXuWVxfM37uY4JANjO0qTgvWKy4iJfILSeRA863kmUZsO77gy' WHERE LibrarianIdentificationNumber = ?";
 
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, idNumber);
