@@ -1,0 +1,839 @@
+Hệ thống quản lý thư viện là một ứng dụng phần mềm được thiết kế để quản lý các tài liệu trong một thư viện. 
+
+❖ Use case: Lập thẻ độc giả 
+Yêu cầu: Hệ thống quản lý thư viện cần cho phép thủ thư lập thẻ độc giả cho người đăng ký thành viên thư viện. Ngoài ra người dùng (chưa có thẻ độc giả) có thể đăng ký 
+thẻ độc giả ngay trên hệ thống. Thông tin trên thẻ độc giả gồm tên độc giả, ngày sinh, giới tính, địa chỉ, số điện thoại, email, Identification number, duration. 
+Hoạt động: thủ thư đăng nhập vào hệ thống, truy cập vào chức năng lập thẻ độc giả, nhập thông tin đăng ký của độc giả và cung cấp cho độc giả số thẻ độc giả. Hoặc người 
+dùng đăng ký thẻ độc giả trực tuyến trên hệ thống, rồi thủ thư sẽ xác thực thông tin, chấp nhận yêu cầu, liên hệ với độc giả để nhận thông tin về thẻ độc giả.
+
+❖Use case: Quản lý document title
+Yêu cầu: Hệ thống quản lý thư viện cần cho phép thủ thư thêm, sửa, xóa thông tin về các tiêu đề tài liệu trong thư viện, bao gồm mã tài liệu, tên tài liệu, topic tài liệu, 
+description tài liệu, note của tài liệu, Category tài liệu, tác giả, năm xuất bản, nhà xuất bản
+Hoạt động: thủ thư đăng nhập vào hệ thống, truy cập vào chức năng quản lý tài liệu, thực hiện thêm/sửa/xóa thông tin về tài liệu trong thư viện. Hệ thống cũng cung cấp
+các chức năng khác như tìm kiếm tài liệu, xem thông tin chi tiết của tài liệu, xem danh sách tài liệu theo tên, tác giả, nhà xuất bản, category, publication year.
+
+❖Use case: Quản lý tài liệu Copy
+Yêu cầu: Hệ thống quản lý thư viện cần cho phép thủ thư thêm, sửa, xóa thông tin về các bản sao của tài liệu trong thư viện, bao gồm mã số bản sao, vị trí lưu trữ, tình trạng
+Hoạt động: thủ thư đăng nhập vào hệ thống, truy cập vào chức năng quản lý tài liệu, thực hiện thêm/sửa/xóa thông tin về bản sao của tài liệu trong thư viện. Hệ thống cũng cung cấp
+các chức năng khác như tìm kiếm tài liệu, xem thông tin chi tiết của bản sao tài liệu, xem danh sách bản sao tài liệu theo loại tình trạng.
+
+❖Use case: Quản lý thủ thư
+Yêu cầu: Hệ thống quản lý thư viện cần cho phép giám đốc thư viện xem thông tin về các nhân viên của thư viện, bao gồm tên, ngày sinh, địa chỉ, giới tính, Identification number, email, số điện thoại,
+department, position, workplace 
+Hoạt động: Giám đốc đăng nhập vào hệ thống, truy cập vào chức năng quản lý nhân viên, thực hiện thêm/sửa/xóa thông tin về nhân viên trong thư viện. Hệ thống cũng cung cấp các chức năng 
+khác như tìm kiếm nhân viên, xem thông tin chi tiết của nhân viên, xem danh sách nhân viên theo từng phòng ban.
+
+❖Use case: Quản lý độc giả
+Yêu cầu: cho phép quản lý thư viện thêm, sửa, xóa, tìm kiếm và xem thông tin về độc giả, bao gồm tên, ngày sinh, địa chỉ, giới tính, Identification number, email, số điện thoại, reader card id
+Hoạt động: Quản lý thư viện có thể thêm mới thông tin độc giả, sửa thông tin, xóa độc giả khỏi cơ sở dữ liệu và tìm kiếm thông tin độc giả dựa trên tên, số điện thoại, Identification number, Reader card id. 
+Khi độc giả đăng ký tài khoản, hệ thống sẽ tạo ra một thẻ thành viên có mã số độc nhất để định danh cho người dùng.
+
+❖Use case: Quản lý thẻ độc giả
+Yêu cầu: Hệ thống quản lý thư viện cần cho phép thủ thư thêm, sửa, xóa thông tin về thẻ độc giả, bao gồm mã số thẻ, tên độc giả, tình trạng thẻ, ngày đăng ký, ngày hết hạn
+Hoạt động: thủ thư đăng nhập vào hệ thống, truy cập vào chức năng quản lý thẻ độc giả, thực hiện thêm/sửa/xóa thông tin về thẻ độc giả trong thư viện. Hệ thống cũng cung cấp các chức năng
+khác như tìm kiếm thẻ độc giả, xem thông tin chi tiết của thẻ độc giả, xem danh sách thẻ độc giả theo loại tình trạng.
+
+❖Use case: Quản lý request tài liệu
+Yêu cầu: cho phép người dùng mượn tài liệu từ thư viện, kiểm tra tình trạng của tài liệu đã yêu cầu mượn và trả lại tài liệu sau khi đã đọc xong.
+Hoạt động: Thủ thư sẽ xác nhận yêu cầu mượn tài liệu, cho phép độc giả mượn tài liệu và cập nhật tình trạng của tài liệu trong cơ sở dữ liệu. Khi độc giả mượn tài liệu, thủ thư sẽ cập nhật tình 
+trạng của yêu cầu mượn tài liệu. Khi tài liệu được trả lại, thủ thư sẽ cập nhật lại tình trạng của tài liệu.
+
+❖Use case: Tìm kiếm tài liệu 
+Yêu cầu: Hệ thống quản lý thư viện cần cho phép người dùng tìm kiếm thông tin về tài liệu trong thư viện theo tên tài liệu, tên tác giả hoặc mã số tài liệu. Độc giả có thể gửi yêu cầu mượn tài liệu
+đã chọn từ kết quả tìm kiếm.
+Hoạt động: Người dùng truy cập vào chức năng tìm kiếm tài liệu, nhập thông tin tìm kiếm (mã số tài liệu, tên tài liệu, tên tác giả, năm xuất bản, nhà xuất bản, category) và hệ thống sẽ trả về 
+kết quả tìm kiếm. Độc giả có thể chọn tài liệu từ kết quả tìm kiếm và gửi yêu cầu mượn tài liệu.
+
+❖Use case: Tủ sách ảo của độc giả
+Yêu cầu: Hệ thống quản lý thư viện cần cho phép độc giả lưu trữ danh sách tài liệu đã đánh dấu vào tủ sách ảo của mình để dễ dàng theo dõi và tìm kiếm sau này. Từ tủ sách, độc giả có thể
+yêu cầu mượn những tài liệu đã đánh dấu. 
+
+❖Use case: Độc giả mượn trả tài liệu 
+Yêu cầu: Hệ thống quản lý thư viện cần cho phép độc giả mượn và trả tài liệu trong thư viện. 
+Hoạt động: Độc giả đăng nhập vào hệ thống, tìm kiếm tài liệu trong cơ sở dữ liệu và yêu cầu mượn. Đợi đến khi thủ thư xác nhận yêu cầu mượn, độc giả sẽ được phép đến thư viện để mượn tài liệu.
+Độc giả có thể theo dõi tình trạng của yêu cầu mượn tài liệu khi đăng nhập vào tài khoản của mình. 
+
+❖Use case: Quản lý thông tin cá nhân 
+Yêu cầu: Hệ thống quản lý thư viện cần cho phép người dùng xem và sửa thông tin cá nhân của mình, bao gồm tên, ngày sinh, địa chỉ, giới tính, Identification number, email, số điện thoại, reader card id.
+Hoạt động: Người dùng đăng nhập vào hệ thống, truy cập vào chức năng quản lý thông tin cá nhân, xem và sửa các thông tin được cho phép. Hệ thống cũng cung cấp các chức năng thay đổi mật khẩu.
+
+Use case: Đăng nhập
+Yêu cầu: Hệ thống quản lý thư viện cần cho phép người dùng đăng nhập vào hệ thống bằng cách nhập số điện thoại (nếu là thủ thư) hoặc mã số độc giả (nếu là độc giả) và mật khẩu.
+Hoạt động: Người dùng truy cập vào form đăng nhập, nhập số điện thoại hoặc mã số độc giả và mật khẩu, sau đó nhấn nút đăng nhập. Hệ thống sẽ kiểm tra thông tin đăng nhập và chuyển hướng người dùng
+
+Use case: Đăng xuất
+Yêu cầu: Hệ thống quản lý thư viện cần cho phép người dùng đăng xuất khỏi hệ thống.
+Hoạt động: Người dùng nhấn nút đăng xuất trên giao diện, hệ thống sẽ xác nhận và đăng xuất người dùng khỏi hệ thống.
+
+Use case: Quên mật khẩu
+Yêu cầu: Hệ thống quản lý thư viện cần cho phép người dùng khôi phục mật khẩu bằng cách nhập email đã đăng ký.
+Hoạt động: Người dùng truy cập vào form quên mật khẩu, nhập email đã đăng ký, sau đó nhấn nút gửi mã xác nhận. Hệ thống sẽ gửi mã xác nhận đến email, người dùng nhập mã xác nhận để có thể đặt lại mật khẩu.
+
+
+
+
+
+No.     Use case ID     Use case name   Description     Actor 
+1       UC001           Make reader card    The librarian makes a reader card for a new member or reader can register for a reader card directly within the system  Librarian, Reader
+2       UC002           Add document title  The librarian adds a new document title with information: document ID, document title, topic, description, note, category, author, publication year, publisher, quantity.  Librarian
+
+
+
+
+Use Case ID     UC001
+Use Case Name    Login
+Use Case Description    Log into the system
+Actor    Librarian, Reader
+Triggering Event    User presses "Login" button
+Precondition    The user has an account in the system
+Successful Condition    The user is logged in
+Failure Condition    The user enters the wrong username or password
+Postcondition    The system displays the appropriate interface based on the user's role (librarian or reader)
+Main Flow of Events     No.     Actor                   Event
+                        1.      System                  The system displays the login form
+                        2.      Manager, Cashier        The user enters the username and password
+                        3.      Manager, Cashier        The user presses the "Login" button
+                        4.      System                  The system hashes the password and compares it with the stored password
+                        5.      System                  User is logged in to the system
+                        6.      System                  If systems recognize the user as a librarian, the system displays the librarian's interface, if the system recognizes the user as a reader, the system displays the reader's interface
+Alternative Flow    4a. If user does not enter the username or password, the system displays an error message and prompts the user to enter the missing information
+                    4b. If the password does not match, the system displays an error message and the user is prompted to re-enter the password
+
+
+Use Case ID     UC002
+Use Case Name    Logout
+Use Case Description    Log out of the system
+Actor    Librarian, Reader
+Triggering Event    User presses "Logout" button
+Precondition    The user is logged in
+Successful Condition    The user is logged out
+Postcondition    The user is logged out and the system displays the Home page
+Main Flow of Events     No.     Actor                   Event
+                        1.      System                  The user presses the "Logout" button
+                        2.      System                  The system logs the user out and displays the Home page
+Alternative Flow    None
+
+
+Use Case ID     UC003
+Use Case Name   Forgot Password
+Use Case Description    User changes password by entering some personal information
+Actor    Librarian, Reader
+Triggering Event    User presses "Forgot Password" button
+Precondition    The user has an account
+Successful Condition    The user successfully changes the password
+Failure Condition    The user does not successfully change the password
+Postcondition    System updates the password in the database and displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      System                  The user presses the "Forgot Password" button
+                        2.      System                  The system displays the "Forgot Password" form
+                        3.      User                    The user enters the email address associated with the account
+                        4.      User                    The user presses the "Send code" button
+                        5.      System                  The system sends a code to the email address
+                        6.      User                    The user enters the code received in the email
+                        7.      User                    The user presses the "Verify Code" button
+                        8.      System                  The system displays the "Change Password" form
+                        9.     User                    The user enters the new password and retypes the new password
+                        10.     User                    The user presses the "Change Password" button
+                        11.     System                  The system hashes the new password and updates the password in the database
+Alternative Flow    5a. If the email address is not associated with an account, the system displays an error message and prompts the user to enter a valid email address
+                    8a. If the code entered by the user does not match the code sent to the email, the system displays an error message and prompts the user to re-enter the code
+                    11a. If the new password and the retyped password do not match, the system displays an error message and prompts the user to re-enter the passwords
+                    11b. If the new password does not meet the password requirements, the system displays an error message and prompts the user to enter a valid password
+
+Use Case ID     UC004
+Use Case Name    Search Document
+Use Case Description    Search for a document in the library system
+Actor    Librarian, Reader
+Triggering Event    User presses "Search" button (in the Search Document form and in Home page)
+Precondition    User is logged in
+Successful Condition    The document is found and displayed
+Failure Condition    The document is not found
+Postcondition    The document is found and displayed
+Main Flow of Events     No.     Actor                   Event
+                        1.      User                    User selects (1 or more) search criteria and enters information in the search fields
+                        2.      User                    User presses the "Search" button
+                        3.      System                  The system searches for the document based on the criteria
+                        4.      System                  The system displays the search results
+Alternative Flow    3a. If the user does not enter any search criteria, the system displays an error message and prompts the user to enter search criteria
+                    3b. If no documents match the search criteria, the system displays a message that no documents were found
+
+Use Case ID     UC005
+Use Case Name   Add Document
+Use Case Description    Add a new document to the library system
+Actor    Librarian
+Triggering Event    Librarian selects "Add" option and presses "Confirm" button (in the Manage Document Title form)
+Precondition    Librarian is logged in
+Successful Condition    The document and its number of copies are added to the system
+Failure Condition    The document is not added to the system
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects "Add" option in the Manage Document Title form
+                        2.      Librarian               Librarian enters the information for the new document (document ID, document title, topic, description, note, category, author, publication year, publisher, quantity)
+                        3.      Librarian               Librarian presses the "Confirm" button
+                        4.      System                  The system adds the document to the database
+                        5.      System                  Based on the quantity entered, the system adds multiple copies of the document to the database
+                        6.      System                  The system displays a success message
+Alternative Flow    4a. If user does not enter all required information, the system displays an error message and prompts the user to enter the missing information
+                    4b. If the document ID already exists in the database, the system displays an error message
+
+Use Case ID     UC006
+Use Case Name    Edit Document
+Use Case Description    Edit an existing document in the library system
+Actor    Librarian
+Triggering Event    Librarian selects "Edit" option and presses "Confirm" button (in the Manage Document Title form)
+Precondition    Librarian is logged in
+Successful Condition    The document is edited in the system
+Failure Condition    The document is not edited in the system
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects "Edit" option in the Manage Document Title form
+                        2.      Librarian               Librarian selects the document to edit
+                        3.      Librarian               Librarian edits the information for the document (document title, topic, description, note, category, author, publication year, publisher)
+                        4.      Librarian               Librarian presses the "Confirm" button
+                        5.      System                  The system updates the document in the database
+                        6.      System                  The system displays a success message
+Alternative Flow    5a. If user does not enter all required information, the system displays an error message and prompts the user to enter the missing information
+
+Use Case ID     UC007
+Use Case Name    Delete Document
+Use Case Description    Delete an existing document from the library system
+Actor    Librarian
+Triggering Event    Librarian selects a document to delete and presses "Delete" button (in the Manage Document Title form)
+Precondition    Librarian is logged in
+Successful Condition    The document and its copies are deleted from the system
+Failure Condition    The document is not deleted from the system
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects a document to delete
+                        2.      Librarian               Librarian presses the "Delete" button
+                        3.      System                  The system displays a confirmation message
+                        4.      Librarian               Librarian presses the "Confirm" button
+                        5.      System                  The system deletes the document from the database
+                        6.      System                  The system displays a success message
+Alternative Flow    3a. If the librarian does not select a document to delete, the system displays an error message
+                    5a. If the librarian presses the "Cancel" button, the system cancels the deletion process
+                    5b. If the document has one (or more) document copy is borrowed from reader, the system displays an error message and does not allow the deletion
+
+
+Use Case ID     UC008
+Use Case Name    Search Document Copy
+Use Case Description    Search for a document copy in the library system
+Actor    Librarian, Reader
+Triggering Event    User presses "Search" button (in the Manage Document Copy form)
+Precondition    User is logged in
+Successful Condition    The document copy is found and displayed
+Failure Condition    The document copy is not found
+Postcondition    The document copy is found and displayed
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian, Reader       User selects (1 or more) search criteria and enters information in the search fields
+                        2.      Librarian, Reader       User presses the "Search" button
+                        3.      System                  The system searches for the document copy based on the criteria
+                        4.      System                  The system displays the search results
+Alternative Flow    3a. If the user does not enter any search criteria, the system displays an error message and prompts the user to enter search criteria
+                    3b. If no document copies match the search criteria, the system displays a message that no document copies were found
+
+Use Case ID     UC009
+Use Case Name    Add Document Copy
+Use Case Description    Add a new copy of an existing document to the library system
+Actor    Librarian
+Triggering Event    Librarian selects "Add A Copy" button (in the Manage Document Copy form)
+Precondition    Librarian is logged in
+Successful Condition    The document copy is added to the system and the quantity of the document title is increased
+Failure Condition    The document copy is not added to the system
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects a document title to add a document copy
+                        2.      Librarian               Librarian presses the "Add A Copy" button
+                        3.      System                  The system generates a new document copy code and add the document copy to the database
+                        4.      System                  The system increases the quantity of the document tilte in the database
+                        5.     System                   The system displays a success message    
+Alternative Flow    3a. If the librarian does not select a document title, the system displays an error message
+
+Use Case ID     UC010
+Use Case Name    Edit Document Copy
+Use Case Description    Edit an existing document copy in the library system
+Actor    Librarian
+Triggering Event    Librarian selects "Edit" option and presses "Confirm" button (in the Manage Document Copy form)
+Precondition    Librarian is logged in
+Successful Condition    The document copy is edited in the system
+Failure Condition    The document copy is not edited in the system
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects "Edit" option in the Manage Document Copy form
+                        2.      Librarian               Librarian selects the document copy to edit
+                        3.      Librarian               Librarian edits the information for the document copy (document location, status)
+                        4.      Librarian               Librarian presses the "Confirm" button
+                        5.      System                  The system updates the document copy in the database
+                        6.      System                  The system displays a success message
+Alternative Flow    5a. If user does not enter all required information, the system displays an error message and prompts the user to enter the missing information
+
+    
+Use Case ID     UC011
+Use Case Name    Delete Document Copy
+Use Case Description    Delete an existing document copy from the library system
+Actor    Librarian
+Triggering Event    Librarian selects a document copy to delete and presses "Delete" button (in the Manage Document Copy form)
+Precondition    Librarian is logged in
+Successful Condition    The document copy is deleted from the system and the quantity of the document title is decreased
+Failure Condition    The document copy is not deleted from the system
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects a document copy to delete
+                        2.      Librarian               Librarian presses the "Delete" button
+                        3.      System                  The system displays a confirmation message
+                        4.      Librarian               Librarian presses the "Confirm" button
+                        5.      System                  The system deletes the document copy from the database and decreases the quantity of the document title
+                        6.      System                  The system displays a success message
+Alternative Flow    3a. If the librarian does not select a document copy to delete, the system displays an error message
+                    5a. If the librarian presses the "Cancel" button, the system cancels the deletion process
+                    5b. If the document copy is borrowed by a reader, the system displays an error message and does not allow the deletion
+
+Use Case ID     UC012
+Use Case Name   Search Librarian
+Use Case Description    Search for a librarian in the library system
+Actor    Director of the library
+Triggering Event    Director presses "Search" button (in the Manage Librarian form)
+Precondition    Director is logged in
+Successful Condition    The librarian is found and displayed
+Failure Condition    The librarian is not found
+Postcondition    The librarian is found and displayed
+Main Flow of Events     No.     Actor                   Event
+                        1.      Director                Director selects (1 or more) search criteria and enters information in the search fields
+                        2.      Director                Director presses the "Search" button
+                        3.      System                  The system searches for the librarian based on the criteria
+                        4.      System                  The system displays the search results
+Alternative Flow    3a. If the director does not enter any search criteria, the system displays an error message and prompts the director to enter search criteria
+                    3b. If no librarians match the search criteria, the system displays a message that no librarians were found
+
+Use Case ID     UC013
+Use Case Name    Add Librarian
+Use Case Description    Add a new librarian to the library system
+Actor    Director of the library
+Triggering Event    Director selects "Add" option and presses "Confirm" button (in the Manage Librarian form)
+Precondition    Director is logged in
+Successful Condition    The librarian is added to the system
+Failure Condition    The librarian is not added to the system
+Postcondition    The librarian is added to the system
+Main Flow of Events     No.     Actor                   Event
+                        1.      Director                Director selects "Add Librarian" option
+                        2.      Director                Director enters the information for the new librarian (name, date of birth, address, gender, Identification number, email, phone number, department, position, workplace)
+                        3.      Director                Director presses the "Confirm" button
+                        4.      System                  The system adds the librarian to the database
+                        5.      System                  The system displays a success message
+Alternative Flow    4a. If the director does not enter all required information, the system displays an error message and prompts the director to enter the missing information
+                    4b. If the Identification number, email, or phone number already exists in the database, the system displays an error message
+
+Use Case ID     UC014
+Use Case Name    Edit Librarian
+Use Case Description    Edit an existing librarian in the library system
+Actor    Director of the library
+Triggering Event    Director selects "Edit" option and presses "Confirm" button (in the Manage Librarian form)
+Precondition    Director is logged in
+Successful Condition    The librarian is edited in the system
+Failure Condition    The librarian is not edited in the system
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Director                Director selects "Edit" option in the Manage Librarian form
+                        2.      Director                Director selects the librarian to edit
+                        3.      Director                Director edits the information for the librarian (address, phone number, department, position, workplace, email)  
+                        4.     Director                 Director presses the "Confirm" button
+                        5.      System                  The system updates the librarian in the database
+                        6.      System                  The system displays a success message
+Alternative Flow    5a. If the director does not enter all required information, the system displays an error message and prompts the director to enter the missing information
+
+Use Case ID     UC015
+Use Case Name    Delete Librarian
+Use Case Description    Delete an existing librarian from the library system
+Actor    Director of the library
+Triggering Event    Director selects a librarian to delete and presses "Delete" button (in the Manage Librarian form)
+Precondition    Director is logged in
+Successful Condition    The librarian is deleted from the system
+Failure Condition    The librarian is not deleted from the system
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Director                Director selects a librarian to delete
+                        2.      Director                Director presses the "Delete" button
+                        3.      System                  The system displays a confirmation message
+                        4.      Director                Director presses the "Confirm" button
+                        5.      System                  The system deletes the librarian from the database
+                        6.      System                  The system displays a success message
+Alternative Flow    3a. If the director does not select a librarian to delete, the system displays an error message
+                    5a. If the director presses the "Cancel" button, the system cancels the deletion process
+
+Use Case ID     UC016
+Use Case Name    Reset Librarian Password
+Use Case Description    Reset the password of an existing librarian in the library system
+Actor    Director of the library
+Triggering Event    Director selects a librarian to reset password and presses "Reset Password" button (in the Manage Librarian form)
+Precondition    Director is logged in
+Successful Condition    The password of the librarian is reset
+Failure Condition    The password of the librarian is not reset
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Director                Director selects a librarian to reset password
+                        2.      Director                Director presses the "Reset Password" button
+                        3.      System                  The system displays a confirmation message
+                        4.      Director                Director presses the "Confirm" button
+                        5.      System                  The system set the password to the default for the librarian
+                        6.      System                  The system displays a success message
+Alternative Flow    3a. If the director does not select a librarian to reset password, the system displays an error message
+                    5a. If the director presses the "Cancel" button, the system cancels the reset password process
+
+Use Case ID     UC017
+Use Case Name    Search Reader
+Use Case Description    Search for a reader in the library system
+Actor    Librarian
+Triggering Event    Librarian presses "Search" button (in the Manage Reader form)
+Precondition    Librarian is logged in
+Successful Condition    The reader is found and displayed
+Failure Condition    The reader is not found
+Postcondition    The reader is found and displayed
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects (1 or more) search criteria and enters information in the search fields
+                        2.      Librarian               Librarian presses the "Search" button
+                        3.      System                  The system searches for the reader based on the criteria
+                        4.      System                  The system displays the search results 
+Alternative Flow    3a. If the librarian does not enter any search criteria, the system displays an error message and prompts the librarian to enter search criteria
+                    3b. If no readers match the search criteria, the system displays a message that no readers were found
+
+Use Case ID     UC018
+Use Case Name    Add Reader
+Use Case Description    Add a new reader to the library system
+Actor    Librarian
+Triggering Event    Librarian selects "Add" option and presses "Confirm" button (in the Manage Reader form)
+Precondition    Librarian is logged in
+Successful Condition    The reader, reader card, and reader's virtual bookshelf are added to the system
+Failure Condition    The reader is not added to the system
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects "Add" option in the Manage Reader form
+                        2.      Librarian               Librarian enters the information for the new reader (name, date of birth, address, gender, Identification number, email, phone number)
+                        3.      Librarian               Librarian presses the "Confirm" button
+                        4.      System                  The system creates a new reader card ID, adds the reader to the database and creates a virtual bookshelf for the reader
+                        5.      System                  The system displays a success message
+Alternative Flow    4a. If the librarian does not enter all required information, the system displays an error message and prompts the librarian to enter the missing information
+                    4b. If the identification number, email, or phone number already exists in the database, the system displays an error message
+
+Use Case ID     UC019
+Use Case Name    Edit Reader
+Use Case Description    Edit an existing reader in the library system
+Actor    Librarian
+Triggering Event    Librarian selects "Edit" option and presses "Confirm" button (in the Manage Reader form)
+Precondition    Librarian is logged in
+Successful Condition    The reader is edited in the system
+Failure Condition    The reader is not edited in the system
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects "Edit" option in the Manage Reader form
+                        2.      Librarian               Librarian selects the reader to edit
+                        3.      Librarian               Librarian edits the information for the reader (address, phone number, email)
+                        4.      Librarian               Librarian presses the "Confirm" button
+                        5.      System                  The system updates the reader in the database
+                        6.      System                  The system displays a success message
+Alternative Flow    5a. If the librarian does not enter all required information, the system displays an error message and prompts the librarian to enter the missing information
+
+Use Case ID     UC020
+Use Case Name    Delete Reader
+Use Case Description    Delete an existing reader from the library system
+Actor    Librarian
+Triggering Event    Librarian selects a reader to delete and presses "Delete" button (in the Manage Reader form)
+Precondition    Librarian is logged in
+Successful Condition    The reader, the reader card and the reader's virtual bookshelf are deleted from the system
+Failure Condition    The reader is not deleted from the system
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects a reader to delete
+                        2.      Librarian               Librarian presses the "Delete" button
+                        3.      System                  The system displays a confirmation message
+                        4.      Librarian               Librarian presses the "Confirm" button
+                        5.      System                  The system deletes the reader from the database
+                        6.      System                   The system deletes the reader, the reader card, and the reader's virtual bookshelf from the database
+                        7.      System                  The system displays a success message
+Alternative Flow    3a. If the librarian does not select a reader to delete, the system displays an error message
+                    5a. If the librarian presses the "Cancel" button, the system cancels the deletion process   
+                    5b. If the reader has borrowed documents, the system displays an error message and does not allow the deletion
+
+Use Case ID     UC021
+Use Case Name    Reset Reader Password
+Use Case Description    Reset the password of an existing reader in the library system
+Actor    Librarian
+Triggering Event    Librarian selects a reader to reset password and presses "Reset Password" button (in the Manage Reader form)
+Precondition    Librarian is logged in
+Successful Condition    The password of the reader is reset
+Failure Condition    The password of the reader is not reset
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects a reader to reset password
+                        2.      Librarian               Librarian presses the "Reset Password" button
+                        3.      System                  The system displays a confirmation message
+                        4.      Librarian               Librarian presses the "Confirm" button
+                        5.      System                  The system set the password to the default for the reader
+                        6.      System                  The system displays a success message
+Alternative Flow    3a. If the librarian does not select a reader to reset password, the system displays an error message
+                    5a. If the librarian presses the "Cancel" button, the system cancels the reset password process
+
+Use Case ID     UC022
+Use Case Name    Search Reader Card
+Use Case Description    Search for a reader card in the library system
+Actor    Librarian
+Triggering Event    Librarian presses "Search" button (in the Manage Reader Card form)
+Precondition    Librarian is logged in
+Successful Condition    The reader card is found and displayed
+Failure Condition    The reader card is not found
+Postcondition    The reader card is found and displayed
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects (1 or more) search criteria and enters information in the search fields
+                        2.      Librarian               Librarian presses the "Search" button
+                        3.      System                  The system searches for the reader card based on the criteria
+                        4.      System                  The system displays the search results
+Alternative Flow    3a. If the librarian does not enter any search criteria, the system displays an error message and prompts the librarian to enter search criteria
+                    3b. If no reader cards match the search criteria, the system displays a message that no reader cards were found 
+
+Use Case ID     UC023
+Use Case Name    Accept Reader Card Request
+Use Case Description    Accept a reader card request in the library system
+Actor    Librarian
+Triggering Event    Librarian selects a reader card request to accept and presses "Accept Request" button (in the Manage Reader Card form)
+Precondition    Librarian is logged in
+Successful Condition    If the reader card's status is "Requested", the status is changed to "Active". If the reader card's status is "Request Extend", the expiration date is extended and the status is changed to "Active"
+Failure Condition    The reader card request is not accepted
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects a reader card request to accept
+                        2.      Librarian               Librarian presses the "Accept" button
+                        3.      System                  The system displays a confirmation message
+                        4.      Librarian               Librarian presses the "Confirm" button
+                        5.      System                  If the reader card's status is "Requested", the system changes the status to "Active"
+                        6.      System                  If the reader card's status is "Request Extend", the system extends the expiration date and changes the status to "Active"
+                        7.      System                  The system displays a success message
+Alternative Flow    3a. If the librarian does not select a reader card request to accept, the system displays an error message
+                    5a. If the reader card's status is not "Requested" or "Request Extend", the system displays an error message
+
+Use Case ID     UC024
+Use Case Name    Reject Reader Card Request
+Use Case Description    Reject a reader card request in the library system
+Actor    Librarian
+Triggering Event    Librarian selects a reader card request to reject and presses "Reject Request" button (in the Manage Reader Card form)
+Precondition    Librarian is logged in
+Successful Condition    The reader card's status is changed to "Rejected"
+Failure Condition    The reader card request is not rejected
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects a reader card request to reject
+                        2.      Librarian               Librarian presses the "Reject" button
+                        3.      System                  The system displays a confirmation message
+                        4.      Librarian               Librarian presses the "Confirm" button
+                        5.      System                  If the reader card's status is "Requested", the system changes the status to "Rejected". If the reader card's status is "Request Extend", the system changes the status to "Active".
+                        6.      System                  The system displays a success message
+Alternative Flow    3a. If the librarian does not select a reader card request to reject, the system displays an error message
+                    3b. If the reader card's status is not "Requested" or "Request Extend", the system displays an error message
+
+Use Case ID     UC025
+Use Case Name    Search Document Request
+Use Case Description    Search for document requests in the library system
+Actor    Librarian
+Triggering Event    Librarian presses "Search" button (in the Manage Document Request form)
+Precondition    Librarian is logged in
+Successful Condition    The document requests are found and displayed
+Failure Condition    The document requests are not found
+Postcondition    The document requests are found and displayed
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects (1 or more) search criteria and enters information in the search fields
+                        2.      Librarian               Librarian presses the "Search" button
+                        3.      System                  The system searches for the document requests based on the criteria
+                        4.      System                  The system displays the search results
+Alternative Flow    3a. If the librarian does not enter any search criteria, the system displays an error message and prompts the librarian to enter search criteria
+                    3b. If no document requests match the search criteria, the system displays a message that no document requests were found
+
+Use Case ID     UC026
+Use Case Name    Add Document Request
+Use Case Description    Add a new document request to the library system
+Actor    Librarian
+Triggering Event    Librarian selects "Add" option and presses "Confirm" button (in the Manage Document Request form)
+Precondition    Librarian is logged in
+Successful Condition    The document request is added to the system
+Failure Condition    The document request is not added to the system
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects "Add" option in the Manage Document Request form
+                        2.      Librarian               Librarian enters the information for the new document request (list of document IDs, reader card ID, note)
+                        3.      Librarian               Librarian presses the "Confirm" button
+                        4.      System                  The system adds the document request to the database
+                        5.      System                  The system displays a success message
+Alternative Flow    4a. If the librarian does not enter all required information, the system displays an error message and prompts the librarian to enter the missing information
+                    4b. If the reader card ID does not exist in the database or is not "Active", the system displays an error message
+                    4c. If one (or more) document ID does not exist in the database or is not available, the system displays an error message
+
+Use Case ID     UC027
+Use Case Name    Accept Document Request
+Use Case Description    Accept a document request in the library system
+Actor    Librarian
+Triggering Event    Librarian selects a document request to accept and presses "Accept Request" button (in the Manage Document Request form)
+Precondition    Librarian is logged in
+Successful Condition    The document request's status is changed to "Accepted"
+Failure Condition    The document request is not accepted
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects a document request to accept
+                        2.      Librarian               Librarian presses the "Accept" button
+                        3.      System                  The system displays a confirmation message
+                        4.      Librarian               Librarian presses the "Confirm" button
+                        5.      System                  The system changes the status of the document request to "Accepted"
+                        6.      System                  The system displays a success message
+Alternative Flow    3a. If the librarian does not select a document request to accept, the system displays an error message
+                    3b. If the document request's status is not "Requested", the system displays an error message
+
+Use Case ID     UC028
+Use Case Name    Reject Document Request
+Use Case Description    Reject a document request in the library system
+Actor    Librarian
+Triggering Event    Librarian selects a document request to reject and presses "Reject Request" button (in the Manage Document Request form)
+Precondition    Librarian is logged in 
+Successful Condition    The document request's status is changed to "Rejected"
+Failure Condition    The document request is not rejected
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects a document request to reject
+                        2.      Librarian               Librarian presses the "Reject" button
+                        3.      System                  The system displays a confirmation message
+                        4.      Librarian               Librarian presses the "Confirm" button
+                        5.      System                  The system changes the status of the document request to "Rejected"
+                        6.      System                  The system displays a success message
+Alternative Flow    3a. If the librarian does not select a document request to reject, the system displays an error message
+                    3b. If the document request's status is not "Requested", the system displays an error message
+
+Use Case ID     UC029
+Use Case Name    Change Request to Borrowed
+Use Case Description    Change the status of a document request to "Borrowed" in the library system
+Actor    Librarian
+Triggering Event    Librarian selects a document request to change status and presses "Borrowed" button (in the Manage Document Request form)
+Precondition    Librarian is logged in
+Successful Condition    The document request's status is changed to "Borrowed"
+Failure Condition    The document request is not changed to "Borrowed"
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects a document request to change status
+                        2.      Librarian               Librarian presses the "Borrowed" button
+                        3.      System                  The system displays a confirmation message
+                        4.      Librarian               Librarian presses the "Confirm" button
+                        5.      System                  The system changes the status of the document request to "Borrowed" and updates the date borrowed (today's date) and due date (today's date + 60 days)
+                        6.      System                  The system displays a success message
+Alternative Flow    3a. If the librarian does not select a document request to change status, the system displays an error message
+                    3b. If the document request's status is not "Accepted", the system displays an error message
+
+Use Case ID     UC030
+Use Case Name    Change Request to Returned
+Use Case Description    Change the status of a document request to "Returned" in the library system
+Actor    Librarian
+Triggering Event    Librarian selects a document request to change status and presses "Returned" button (in the Manage Document Request form)
+Precondition    Librarian is logged in
+Successful Condition    The document request's status is changed to "Returned"
+Failure Condition    The document request is not changed to "Returned"
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian selects a document request to change status
+                        2.      Librarian               Librarian can edit the information for the document request (penalty fee, note)
+                        3.      Librarian               Librarian presses the "Returned" button
+                        4.      System                  The system displays a confirmation message
+                        5.      Librarian               Librarian presses the "Confirm" button
+                        6.      System                  The system changes the status of the document request to "Returned" and updates the date returned (today's date)
+                        7.      System                  The system displays a success message
+Alternative Flow    4a. If the librarian does not select a document request to change status, the system displays an error message
+                    4b. If the document request's status is not "Borrowed", the system displays an error message
+
+Use Case ID     UC031
+Use Case Name    Add Document Copy to Virtual Bookshelf
+Use Case Description    Add a document copy to the bookshelf in the library system
+Actor    Reader
+Triggering Event    Reader selects a document copy to add to the bookshelf and presses "Add to Bookshelf" button (in the Document Detail form)
+Precondition    Reader is logged in and the document copy is displayed
+Successful Condition    The document copy is added to the bookshelf
+Failure Condition    The document copy is not added to the bookshelf
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Reader                  Reader selects a document copy to add to the bookshelf
+                        2.      Reader                  Reader presses the "Add to Bookshelf" button
+                        3.      System                  The system adds the document copy to the reader's bookshelf
+                        4.      System                  The system displays a success message
+Alternative Flow    3a. Only reader can add a document copy to the bookshelf, otherwise the system displays an error message
+                    3b. If the reader does not select a document copy to add to the bookshelf, the system displays an error message
+                    3c. If the document copy is already in the reader's bookshelf, the system displays an error message
+
+Use Case ID     UC032
+Use Case Name    Request Document Copy
+Use Case Description    Request to borrow a document copy in the library system
+Actor    Reader
+Triggering Event    Reader selects a document copy to request and presses "Send Request" button (in the Advanced Search form). Or Reader selects one or more document copies to request and presses "Request Selected Documents" button (in the Bookshelf form)
+Precondition    Reader is logged in, open the Advanced Search form or the Bookshelf form and the document copy(s) is displayed (and status is "Available")
+Successful Condition    The request of borrowing a document copy is sent to the librarian
+Failure Condition    The request of borrowing a document copy is not sent
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Reader                  Reader selects one or more document copies to request
+                        2.      Reader                  Reader presses the "Send Request" button
+                        3.      System                  The system creates a request for the document copy and sends the request to the librarian
+                        4.      System                  The system displays a success message
+Alternative Flow    3a. Only reader with an "Active" reader card can send a request, otherwise the system displays an error message
+                    3b. If the reader does not select any document copies to request, the system displays an error message
+                    3c. If the document copy is not "Available", the system displays an error message
+
+Use Case ID     UC033
+Use Case Name    Request A Reader Card
+Use Case Description    Guest requests to make a reader card in the library system
+Actor    Guest
+Triggering Event    Guest presses "Send Request" button (in the Make A Reader Card form)
+Precondition    Guest enters all required information
+Successful Condition    The request is sent to the librarian
+Failure Condition    The request is not sent
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Guest                   Guest enters the information for the reader card (name, date of birth, address, gender, Identification number, email, phone number, duration)
+                        2.      Guest                   Guest presses the "Send Request" button
+                        3.      System                  The system add the guest information and create a request for the reader card
+                        4.      System                  The system sends the request to the librarian
+                        5.      System                  The system displays a success message
+Alternative Flow    3a. Only users who are not logged in can press the "Send Request" button, otherwise the system displays an error message
+                    3b. If the guest does not enter all required information, the system displays an error message and prompts the guest to enter the missing information
+                    3c. If identification number, email, or phone number already exists in the database, the system displays an error message
+            
+Use Case ID     UC034
+Use Case Name    Extend Reader Card
+Use Case Description    Reader requests to extend the expiration date of the reader card in the library system
+Actor    Reader
+Triggering Event    Reader presses "Request Extend" button (in the User Request form)
+Precondition    Reader is logged in
+Successful Condition    The expiration date of the reader card is extended and the status of the reader card is set to "Request Extend"
+Failure Condition    The expiration date of the reader card is not extended
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Reader                  Reader selects a duration to extend the expiration date of the reader card
+                        2.      Reader                  Reader presses the "Request Extend" button
+                        3.      System                  The system extends the expiration date of the reader card and set the status of reader card to "Request Extend ({duration})"
+                        4.      System                  The system displays a success message
+Alternative Flow    3a. If the reader does not select a duration to extend the expiration date, the system displays an error message
+
+Use Case ID     UC035
+Use Case Name    Edit Reader Card PIN 
+Use Case Description    Reader changes the PIN of the reader card in the library system
+Actor    Reader
+Triggering Event    Reader presses "Edit PIN" button (in the User Request form)
+Precondition    Reader is logged in
+Successful Condition    The PIN of the reader card is changed
+Failure Condition    The PIN of the reader card is not changed
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Reader                  Reader enters the old PIN, the new PIN and retypes the new PIN
+                        2.      Reader                  Reader presses the "Edit PIN" button
+                        3.      System                  The system updates the PIN of the reader card
+                        4.      System                  The system displays a success message
+Alternative Flow    3a. If the reader does not enter the required information, the system displays an error message and prompts the reader to enter the missing information
+                    3b. If the old PIN does not match the current PIN, the system displays an error message
+                    3c. If the new PIN and the retyped new PIN do not match, the system displays an error message
+                    3d. If the new PIN does not meet the PIN requirements, the system displays an error message
+
+Use Case ID     UC036
+Use Case Name   Cancel Book Request
+Use Case Description    Reader cancels the request of borrowing a book in the library system
+Actor    Reader
+Triggering Event    Reader selects a book request to cancel and presses "Cancel Request" button (in the User Request form)
+Precondition    Reader is logged in and has a book request
+Successful Condition    The request of borrowing a book is canceled
+Failure Condition    The request of borrowing a book is not canceled
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Reader                  Reader selects a book request to cancel
+                        2.      Reader                  Reader presses the "Cancel Request" button
+                        3.      System                  The system displays a confirmation message
+                        4.      Reader                  Reader presses the "Confirm" button
+                        5.      System                  The system changes the status of the book request to "Canceled"
+                        6.      System                  The system displays a success message
+Alternative Flow    3a. If the reader does not select a book request to cancel, the system displays an error message
+                    3b. If the status of the book request is not "Requested", the system displays an error message
+                    4a. If the reader presses the "Cancel" button, the system cancels the cancel request process
+                    
+Use Case ID     UC037
+Use Case Name    Librarian changes personal information
+Use Case Description   Librarian changes personal information in the library system
+Actor    Librarian
+Triggering Event    Librarian presses the personal information (in the Home page), enter the new information and presses "Edit information" button (in InfoLibrarian form)
+Precondition    Librarian is logged in
+Successful Condition    The Librarian's personal information is changed
+Failure Condition    The Librarian's personal information is not changed
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian enters the new information (address, phone number, email)
+                        2.      Librarian               Librarian presses the "Edit information" button
+                        3.      System                  The system updates the Librarian's personal information
+                        4.      System                  The system displays a success message
+Alternative Flow    3a. If the Librarian does not enter all required information, the system displays an error message and prompts the Librarian to enter the missing information
+                    3b. If phone number or email already exists in the database, the system displays an error message
+
+Use Case ID     UC038
+Use Case Name    Reader changes personal information
+Use Case Description    Reader changes personal information in the library system
+Actor    Reader
+Triggering Event    Reader presses the personal information (in the Home page), enter the new information and presses "Edit information" button (in InfoReader form)
+Precondition    Reader is logged in
+Successful Condition    The Reader's personal information is changed
+Failure Condition    The Reader's personal information is not changed
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Reader                  Reader enters the new information (address, phone number, email)
+                        2.      Reader                  Reader presses the "Edit information" button
+                        3.      System                  The system updates the Reader's personal information
+                        4.      System                  The system displays a success message
+Alternative Flow    3a. If the Reader does not enter all required information, the system displays an error message and prompts the Reader to enter the missing information
+                    3b. If phone number or email already exists in the database, the system displays an error message
+
+Use Case ID     UC039
+Use Case Name    Librarian changes password
+Use Case Description    Librarian changes password in the library system
+Actor    Librarian
+Triggering Event    Librarian presses the personal information (in the Home page), enter the old password, the new password and retypes the new password and presses "Edit password" button (in InfoLibrarian form)
+Precondition    Librarian is logged in
+Successful Condition    The Librarian's password is changed
+Failure Condition    The Librarian's password is not changed
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Librarian               Librarian enters the old password, the new password and retypes the new password
+                        2.      Librarian               Librarian presses the "Change password" button
+                        3.      System                  The system updates the Librarian's password
+                        4.      System                  The system displays a success message
+Alternative Flow    3a. If the Librarian does not enter the required information, the system displays an error message and prompts the Librarian to enter the missing information
+                    3b. If the old password does not match the current password, the system displays an error message
+                    3c. If the new password and the retyped new password do not match, the system displays an error message
+                    3d. If the new password does not meet the password requirements, the system displays an error message
+
+Use Case ID     UC040
+Use Case Name    Reader changes password
+Use Case Description    Reader changes password in the library system
+Actor    Reader
+Triggering Event    Reader presses the personal information (in the Home page), enter the old password, the new password and retypes the new password and presses "Edit password" button (in InfoReader form)
+Precondition    Reader is logged in
+Successful Condition    The Reader's password is changed
+Failure Condition    The Reader's password is not changed
+Postcondition    The system displays a success message
+Main Flow of Events     No.     Actor                   Event
+                        1.      Reader                  Reader enters the old password, the new password and retypes the new password
+                        2.      Reader                  Reader presses the "Change password" button
+                        3.      System                  The system updates the Reader's password
+                        4.      System                  The system displays a success message
+Alternative Flow    3a. If the Reader does not enter the required information, the system displays an error message and prompts the Reader to enter the missing information
+                    3b. If the old password does not match the current password, the system displays an error message
+                    3c. If the new password and the retyped new password do not match, the system displays an error message
+                    3d. If the new password does not meet the password requirements, the system displays an error message
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
