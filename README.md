@@ -8,7 +8,13 @@
 ## Highlighted Features
 I use RabbitMQ to receive feedback from users. For example, if two devices are open at the same time (reader and librarian), when readers request books, cancel book requests, request to make a reader card, extend the expiration date of a reader card, etc., the interface on the librarian's side will display notifications in real-time.
 <br>
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/QeZ3S9HdEMU/0.jpg)](https://www.youtube.com/watch?v=QeZ3S9HdEMU)
+
+
+
+https://github.com/user-attachments/assets/2a2a00f3-6ea6-49da-99c6-52aa0705b552
+
+
+
 ## Interface
 ### Home
 ![image](https://github.com/user-attachments/assets/c263ec03-5a33-47f7-85ed-9d38612b9858)
